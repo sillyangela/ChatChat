@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class WelcomeViewController: UIViewController {
 
@@ -29,13 +30,28 @@ class WelcomeViewController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: Any) {
         print("login pressed")
         dissmissKeyboard()
+       
+        
+        if emailTextField.text != "" && passwordTextfield.text != "" {
+            loginUser()
+        } else {
+            ProgressHUD.showError("Please enter your email address and password to log in!")
+        }
         cleanTextFields()
     }
     
     @IBAction func registerButtonPressed(_ sender: Any) {
         print("register pressed")
         dissmissKeyboard()
+        
+        if (emailTextField.text != "" && passwordTextfield.text != "" && rpasswordTextfield.text != ""){
+            registerUser()
+        } else {
+            ProgressHUD.showError("All fields required!")
+        }
+        
         cleanTextFields()
+        
     }
     @IBAction func bgtapped(_ sender: Any) {
         print("bg pressed")
@@ -52,5 +68,27 @@ class WelcomeViewController: UIViewController {
         passwordTextfield.text = "";
         rpasswordTextfield.text = "";
         print("text fields cleaned");
+    }
+    
+    func loginUser(){
+        print("Status: logging in")
+        ProgressHUD.show("Loging in ... ")
+        FUser.loginUserWith(email: emailTextField.text!, password: passwordTextfield.text!)
+        {
+            (error) in
+            
+            //if there is an error
+            if error != nil {
+                ProgressHUD.showError(error!.localizedDescription)
+                return
+            }
+            //if there is no error, show the chat 
+        }
+        
+        
+        
+    }
+    func registerUser(){
+        print("registering")
     }
 }
