@@ -37,20 +37,26 @@ class WelcomeViewController: UIViewController {
         } else {
             ProgressHUD.showError("Please enter your email address and password to log in!")
         }
-        cleanTextFields()
+        
     }
     
     @IBAction func registerButtonPressed(_ sender: Any) {
         print("register pressed")
         dissmissKeyboard()
         
-        if (emailTextField.text != "" && passwordTextfield.text != "" && rpasswordTextfield.text != ""){
-            registerUser()
+        if emailTextField.text != "" && passwordTextfield.text != "" && rpasswordTextfield.text != ""{
+            
+            if passwordTextfield.text == rpasswordTextfield.text{
+                registerUser()
+            }else{
+                ProgressHUD.showError("Passwords don't match!")
+            }
+            
         } else {
             ProgressHUD.showError("All fields required!")
         }
         
-        cleanTextFields()
+        
         
     }
     @IBAction func bgtapped(_ sender: Any) {
@@ -81,14 +87,22 @@ class WelcomeViewController: UIViewController {
             if error != nil {
                 ProgressHUD.showError(error!.localizedDescription)
                 return
+            }else{
+                //if there is no error, show the chat
+                self.startApp()
             }
-            //if there is no error, show the chat 
+            
         }
-        
-        
         
     }
     func registerUser(){
         print("registering")
+    }
+    //MARK: StartApp
+    func startApp(){
+        ProgressHUD.dismiss()
+        cleanTextFields()
+        
+        //display chat
     }
 }
