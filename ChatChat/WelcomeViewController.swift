@@ -45,8 +45,10 @@ class WelcomeViewController: UIViewController {
         dissmissKeyboard()
         
         if emailTextField.text != "" && passwordTextfield.text != "" && rpasswordTextfield.text != ""{
-            
-            if passwordTextfield.text == rpasswordTextfield.text{
+            if passwordTextfield.text!.count<8 {
+                ProgressHUD.showError("Password is too short!")
+            }else if passwordTextfield.text! == rpasswordTextfield.text!{
+                
                 registerUser()
             }else{
                 ProgressHUD.showError("Passwords don't match!")
@@ -55,6 +57,7 @@ class WelcomeViewController: UIViewController {
         } else {
             ProgressHUD.showError("All fields required!")
         }
+    
         
         
         
@@ -97,6 +100,10 @@ class WelcomeViewController: UIViewController {
     }
     func registerUser(){
         print("registering")
+        
+        performSegue(withIdentifier: "welcomeTofinishReg", sender: self)
+        
+        cleanTextFields()
     }
     //MARK: StartApp
     func startApp(){
@@ -104,5 +111,18 @@ class WelcomeViewController: UIViewController {
         cleanTextFields()
         
         //display chat
+    }
+    
+    
+    //MARK: Navigation through vcs
+    
+    override func prepare(for segue:UIStoryboardSegue,  sender: Any?){
+        if segue.identifier == "welcomeTofinishReg"{
+            //create a new instance of the next view controller we want to transfer to
+            let vc = segue.destination as! FinishRegistrationViewController
+            
+            vc.email = emailTextField.text!
+            vc.password = passwordTextfield.text!
+        }
     }
 }

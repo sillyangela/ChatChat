@@ -16,6 +16,7 @@
 		CC267CC9231235DF007F3C1D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267CC8231235DF007F3C1D /* Constants.swift */; };
 		CC267CCB231239F0007F3C1D /* CollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267CCA231239F0007F3C1D /* CollectionReference.swift */; };
 		CC267CCD23123AA8007F3C1D /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267CCC23123AA8007F3C1D /* HelperFunctions.swift */; };
+		CC267CCF23127D26007F3C1D /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267CCE23127D26007F3C1D /* FinishRegistrationViewController.swift */; };
 		CCBD95F523122F6300AE07DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCBD95F423122F6300AE07DD /* GoogleService-Info.plist */; };
 		DFD85279A77C4089B1612E34 /* Pods_ChatChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81720887013EAFD1B31E9BA8 /* Pods_ChatChat.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		CC267CC8231235DF007F3C1D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC267CCA231239F0007F3C1D /* CollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReference.swift; sourceTree = "<group>"; };
 		CC267CCC23123AA8007F3C1D /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		CC267CCE23127D26007F3C1D /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		CCBD95F423122F6300AE07DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E731B0DA49E9A1FC84D1BE59 /* Pods-ChatChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatChat.release.xcconfig"; path = "Target Support Files/Pods-ChatChat/Pods-ChatChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,10 +92,9 @@
 			children = (
 				CC072597230F689C0030EE60 /* AppDelegate.swift */,
 				CC0AE97C230F713900AC81AE /* WelcomeViewController.swift */,
-				CC267CC623123219007F3C1D /* FUser.swift */,
-				CC267CCC23123AA8007F3C1D /* HelperFunctions.swift */,
-				CC267CCA231239F0007F3C1D /* CollectionReference.swift */,
-				CC267CC8231235DF007F3C1D /* Constants.swift */,
+				CC267CCE23127D26007F3C1D /* FinishRegistrationViewController.swift */,
+				CC267CD123127D71007F3C1D /* Classes */,
+				CC267CD023127D4B007F3C1D /* Helpers */,
 				CC07259B230F689C0030EE60 /* Main.storyboard */,
 				CC07259E230F689E0030EE60 /* Assets.xcassets */,
 				CC0725A0230F689E0030EE60 /* LaunchScreen.storyboard */,
@@ -101,6 +102,24 @@
 				CCBD95F423122F6300AE07DD /* GoogleService-Info.plist */,
 			);
 			path = ChatChat;
+			sourceTree = "<group>";
+		};
+		CC267CD023127D4B007F3C1D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CC267CCC23123AA8007F3C1D /* HelperFunctions.swift */,
+				CC267CCA231239F0007F3C1D /* CollectionReference.swift */,
+				CC267CC8231235DF007F3C1D /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CC267CD123127D71007F3C1D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CC267CC623123219007F3C1D /* FUser.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +243,7 @@
 				CC0AE97D230F713900AC81AE /* WelcomeViewController.swift in Sources */,
 				CC267CCB231239F0007F3C1D /* CollectionReference.swift in Sources */,
 				CC267CC9231235DF007F3C1D /* Constants.swift in Sources */,
+				CC267CCF23127D26007F3C1D /* FinishRegistrationViewController.swift in Sources */,
 				CC267CCD23123AA8007F3C1D /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
