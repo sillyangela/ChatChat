@@ -111,6 +111,7 @@ class WelcomeViewController: UIViewController {
         cleanTextFields()
         
         //display chat
+        //... yet to come
     }
     
     
