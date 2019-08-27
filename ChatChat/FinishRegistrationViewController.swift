@@ -102,9 +102,23 @@ class FinishRegistrationViewController: UIViewController {
             ProgressHUD.dismiss()
             
             //go to the main chat app when finish registration
+            
+            self.startApp()
+            
+            
         }
     }
-    
+    func startApp(){
+        ProgressHUD.dismiss()
+        cleanTextFields()
+        
+        //create an instance of main application
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApp") as! UITabBarController
+        
+        self.present(mainView, animated: true, completion: nil)
+        
+        
+    }
     func registerUser(){
         let fullName = firstNameTextField.text! + " " + lastNameTextField.text!
         

@@ -111,7 +111,12 @@ class WelcomeViewController: UIViewController {
         cleanTextFields()
         
         //display chat
-        //... yet to come
+        
+        //create an instance of main application
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApp") as! UITabBarController
+        
+        self.present(mainView, animated: true, completion: nil)
+
     }
     
     
