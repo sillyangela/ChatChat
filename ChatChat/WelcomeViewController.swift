@@ -110,8 +110,9 @@ class WelcomeViewController: UIViewController {
         ProgressHUD.dismiss()
         cleanTextFields()
         
-        //display chat
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION),object: nil, userInfo: [kUSERID : FUser.currentId()])
         
+        //display chat
         //create an instance of main application
         let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApp") as! UITabBarController
         

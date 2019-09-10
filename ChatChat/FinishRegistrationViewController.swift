@@ -94,7 +94,7 @@ class FinishRegistrationViewController: UIViewController {
             if error != nil{
                 DispatchQueue.main.async {
                     ProgressHUD.showError(error!.localizedDescription)
-                    
+                    print(error!.localizedDescription )
                 }
                 return
             }
@@ -111,6 +111,8 @@ class FinishRegistrationViewController: UIViewController {
     func startApp(){
         ProgressHUD.dismiss()
         cleanTextFields()
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION),object: nil, userInfo: [kUSERID : FUser.currentId()])
         
         //create an instance of main application
         let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApp") as! UITabBarController
