@@ -10,9 +10,20 @@ import UIKit
 
 class UserTableViewCell: UITableViewCell {
 
+    var indexPath : IndexPath!
+    let tapGestureRecognizer = UITapGestureRecognizer()
+    
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        tapGestureRecognizer.addTarget(self, action: #selector(self.avatarTap))
+        avatarImageView.isUserInteractionEnabled = true
+        avatarImageView.addGestureRecognizer(tapGestureRecognizer)
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -21,4 +32,24 @@ class UserTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
+    
+    
+    func generateCellWithNewUser (fUser: FUser, indexPath: IndexPath){
+        self.indexPath = indexPath
+        
+        self.fullNameLabel.text = fUser.fullname
+        
+        if fUser.avatar != "" {
+            imageFromData(pictureData: fUser.avatar) { (avatarImage) in
+                if avatarImage != nil {
+                    self.avatarImageView.image = avatarImage! .circleMasked
+                }
+            }
+        }
+        
+    }
+    func avatarTap(){
+        print("\(indexPath) tapped")
+    }
 }
