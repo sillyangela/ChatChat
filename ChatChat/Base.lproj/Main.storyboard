@@ -306,10 +306,10 @@
             </objects>
             <point key="canvasLocation" x="3324.6376811594205" y="206.91964285714286"/>
         </scene>
-        <!--Table View Controller-->
+        <!--UsersUI Table View Controller-->
         <scene sceneID="kbt-H2-99t">
             <objects>
-                <tableViewController id="gaH-AW-x9H" sceneMemberID="viewController">
+                <tableViewController id="gaH-AW-x9H" customClass="UsersUITableViewController" customModule="ChatChat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xta-56-hNe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -367,6 +367,10 @@
                             <outlet property="delegate" destination="gaH-AW-x9H" id="bpx-td-4dr"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="filterSGC" destination="VAA-l2-74P" id="bnC-Jb-3uH"/>
+                        <outlet property="headerView" destination="vMW-mb-KTV" id="9Z7-ca-J6d"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9u-7h-3v8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
