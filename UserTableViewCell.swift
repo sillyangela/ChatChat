@@ -18,7 +18,7 @@ class UserTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // Initia lization code
         
         tapGestureRecognizer.addTarget(self, action: #selector(self.avatarTap))
         avatarImageView.isUserInteractionEnabled = true
@@ -50,6 +50,6 @@ class UserTableViewCell: UITableViewCell {
         
     }
     func avatarTap(){
-        print("\(indexPath) tapped")
+        print("\(indexPath)")
     }
 }

@@ -20,7 +20,7 @@
 		CC267CD323171E86007F3C1D /* logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC267CD223171E86007F3C1D /* logo.jpg */; };
 		CC267CD72327743F007F3C1D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267CD62327743F007F3C1D /* SettingsTableViewController.swift */; };
 		CC267CD923278077007F3C1D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267CD823278077007F3C1D /* UserTableViewCell.swift */; };
-		CC267CDB23278A5B007F3C1D /* UsersUITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC267CDA23278A5B007F3C1D /* UsersUITableViewController.swift */; };
+		CC990453237A185F00CC5655 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC990452237A185F00CC5655 /* UsersTableViewController.swift */; };
 		CCBD95F523122F6300AE07DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCBD95F423122F6300AE07DD /* GoogleService-Info.plist */; };
 		DFD85279A77C4089B1612E34 /* Pods_ChatChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81720887013EAFD1B31E9BA8 /* Pods_ChatChat.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +43,7 @@
 		CC267CD223171E86007F3C1D /* logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpg; sourceTree = "<group>"; };
 		CC267CD62327743F007F3C1D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		CC267CD823278077007F3C1D /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
-		CC267CDA23278A5B007F3C1D /* UsersUITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersUITableViewController.swift; sourceTree = "<group>"; };
+		CC990452237A185F00CC5655 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		CCBD95F423122F6300AE07DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E731B0DA49E9A1FC84D1BE59 /* Pods-ChatChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatChat.release.xcconfig"; path = "Target Support Files/Pods-ChatChat/Pods-ChatChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,8 +103,8 @@
 				CC0AE97C230F713900AC81AE /* WelcomeViewController.swift */,
 				CC267CCE23127D26007F3C1D /* FinishRegistrationViewController.swift */,
 				CC267CD62327743F007F3C1D /* SettingsTableViewController.swift */,
-				CC267CD823278077007F3C1D /* UserTableViewCell.swift */,
-				CC267CDA23278A5B007F3C1D /* UsersUITableViewController.swift */,
+				CC990452237A185F00CC5655 /* UsersTableViewController.swift */,
+				CC990451237A17F600CC5655 /* CustumeCells */,
 				CC267CD123127D71007F3C1D /* Classes */,
 				CC267CD023127D4B007F3C1D /* Helpers */,
 				CC07259B230F689C0030EE60 /* Main.storyboard */,
@@ -132,6 +132,15 @@
 				CC267CC623123219007F3C1D /* FUser.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		CC990451237A17F600CC5655 /* CustumeCells */ = {
+			isa = PBXGroup;
+			children = (
+				CC267CD823278077007F3C1D /* UserTableViewCell.swift */,
+			);
+			name = CustumeCells;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,9 +266,9 @@
 				CC0AE97D230F713900AC81AE /* WelcomeViewController.swift in Sources */,
 				CC267CCB231239F0007F3C1D /* CollectionReference.swift in Sources */,
 				CC267CD72327743F007F3C1D /* SettingsTableViewController.swift in Sources */,
-				CC267CDB23278A5B007F3C1D /* UsersUITableViewController.swift in Sources */,
 				CC267CC9231235DF007F3C1D /* Constants.swift in Sources */,
 				CC267CCF23127D26007F3C1D /* FinishRegistrationViewController.swift in Sources */,
+				CC990453237A185F00CC5655 /* UsersTableViewController.swift in Sources */,
 				CC267CCD23123AA8007F3C1D /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
